@@ -1,0 +1,8 @@
+{
+ "name": "leftmenu",
+ "version": "1.0.0",
+ "main": "leftmenu.js",
+ "author": "Floricel Gabriel-Costin",
+ "license": "No License",
+ "private": true
+}

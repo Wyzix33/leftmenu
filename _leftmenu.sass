@@ -1,0 +1,110 @@
+.menu
+ box-shadow: 0 0 10px $transparent-black-color
+ width: 20px
+ user-select: none
+ overflow: auto
+ background: $green1-color
+ overflow: hidden
+ bottom: 0
+ float: none
+ left: 0
+ position: fixed
+ top: 0
+ z-index: 11
+ transition: width .3s ease-in-out
+ transition-delay: .2s
+ &::after
+  content: 'MENU'
+  text-orientation: upright
+  position: absolute
+  top: 0
+  writing-mode: vertical-rl
+  color: $white-color
+  font-weight: bold
+  bottom: 0
+  left: 0
+  right: 0
+  background: $green3-color
+ a
+  white-space: nowrap
+ &.open
+  width: 250px
+  &::after
+   transition-delay: .2s
+   transition: visibility .4s ease-in-out
+   visibility: hidden
+ ul,
+ li,
+ h3
+  margin: 0
+  padding: 0
+ h3
+  background: linear-gradient($green2-color,$green3-color)
+  a
+   padding: 0 10px
+   font-size: 12px
+   line-height: 34px
+   display: block
+   color: $transparent-white50-color
+   text-decoration: none
+  &:hover
+   text-shadow: 0 0 1px $transparent-white50-color
+ ul
+  list-style-type: none
+  ul
+   max-height: 0
+   transition: all .3s ease-out
+   overflow: hidden
+   ul
+    margin-left: 30px
+   li
+    a
+     background: $green1-color
+     color: $white-color
+     text-decoration: none
+     font-size: 14px
+     line-height: 22px
+     display: block
+     padding: 0 7px
+     position: relative
+     border-left: 3px solid transparent
+     &:hover
+      background: $green-color
+      box-sizing: border-box
+      border-left: 3px solid $lightgreen-color
+ .active
+  & > a
+   &:only-child
+    border-left: 3px solid $lightgreen-color
+   &:not(:only-child)
+    &::before
+     content: '\276F'
+     color: $lightgreen-color
+     margin-right: 10px
+     transform: rotate(90deg)
+     display: inline-block
+ li
+  &.active
+   & > ul
+    max-height: 500px
+    transition: all .3s ease-in
+    background: $green4-color
+    & ul
+     a
+      background: $green4-color
+   & > h3
+    text-shadow: 0 0 1px $white-color
+ a
+  &:not(:only-child)
+   background: $green1-color
+   &::before
+    content: '\276F'
+    margin-right: 10px
+ .ctc
+  position: absolute
+  width: 100%
+  margin: 0 auto
+  text-align: center
+  bottom: 10px
+  background: $transparent-black-color
+  color: $white-color
