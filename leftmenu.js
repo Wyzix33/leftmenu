@@ -1,9 +1,13 @@
 const mainMenu = document.getElementById('mainMenu');
-mainMenu.removeAttribute('style');
 mainMenu.addEventListener('click', menu);
 mainMenu.addEventListener('mouseleave', menu);
 openMenu_();
-
+export function show() {
+ mainMenu.removeAttribute('style');
+}
+export function hide() {
+ mainMenu.style.display = 'none';
+}
 function openMenu_() {
  const lochash = window.location.hash.split('/');
  const item = mainMenu.querySelector(`a[href='${lochash[0]}']`);
