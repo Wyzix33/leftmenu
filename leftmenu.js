@@ -2,10 +2,10 @@ const mainMenu = document.getElementById('mainMenu');
 mainMenu.addEventListener('click', menu);
 mainMenu.addEventListener('mouseleave', menu);
 openMenu_();
-export function show() {
+export function showMenu() {
  mainMenu.removeAttribute('style');
 }
-export function hide() {
+export function hideMenu() {
  mainMenu.style.display = 'none';
 }
 function openMenu_() {
